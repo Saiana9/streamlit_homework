@@ -4,7 +4,7 @@ import plotly.express as px
 from PIL import Image
 
 # header
-st.header('AirBnB')
+st.header('AIRBNB DATA')
 
 # Displaying an image
 image = Image.open('data/image.jpg')
@@ -53,6 +53,7 @@ filtred = df[(df['city'].isin(city))]
 st.write(filtred)
 
 # Create distplot with custom bin_size
+st.write("## Spread of Airbnb in choosen cities")
 fig = px.scatter(filtred, x='log_price', y='review_scores_rating', color='city')
 
 # Plot!
