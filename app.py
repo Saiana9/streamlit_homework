@@ -53,7 +53,7 @@ filtred = df[(df['city'].isin(city))]
 st.write(filtred)
 
 # Create distplot with custom bin_size
-st.write("## Spread of Airbnb in choosen cities")
+st.write("## Spread of Airbnb in chosen cities")
 fig = px.scatter(filtred, x='log_price', y='review_scores_rating', color='city')
 
 # Plot!
